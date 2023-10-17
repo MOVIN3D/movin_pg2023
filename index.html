@@ -228,6 +228,23 @@
     </div>
     <!--/ Abstract. -->
 
+    <!-- Overall architecture -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+          <h2 class="title is-3">Overall framework</h2>
+          <img src="./static/images/overview.png"/>
+          <div class="content has-text-justified">
+            <p>
+              Overview of MOVIN framework. 
+              The model separates into the Feature Encoder and the Pose Generator. 
+              At inference time, only the Pose Generator and the embedding modules of Feature Encoder are used. 
+              Given the sampled point cloud sequence, our model generates current global and local pose features, which is used as a condition the next time frame.
+            </p>
+          </div>
+      </div>
+    </div>
+    <!--/ Overall architecture. -->
+
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -246,7 +263,7 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <div class="columns is-centered">
+    <!-- <div class="columns is-centered"> -->
 
       <!-- Visual Effects. -->
       <!-- <div class="column">
@@ -278,24 +295,23 @@
                       type="video/mp4">
             </video>
           </div>
-
         </div>
-      </div>
-    </div> -->
-    <!--/ Matting. -->
+      </div> -->
+      <!--/ Matting. -->
+    
+    <!-- </div> -->
 
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <!-- <h2 class="title is-3">Animation</h2> -->
+        <h2 class="title is-3">Results</h2>
 
         <!-- Interpolating. -->
-        <!-- <h3 class="title is-4">Interpolating states</h3>
+        <!-- <h3 class="title is-4">Live real-time motion capture</h3>
         <div class="content has-text-justified">
           <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
+            Our real-time motion capture system with a single LiDAR.
+            Our system does not require offline calibration and captures the subject’s motion in real-time, allowing users to check the results immediately. 
           </p>
         </div>
         <div class="columns is-vcentered interpolation-panel">
@@ -323,12 +339,38 @@
         <br/> -->
         <!--/ Interpolating. -->
 
-        <!-- Re-rendering. -->
-        <!-- <h3 class="title is-4">Re-rendering the input video</h3>
+        <!-- Live-stream. -->
+        <h3 class="title is-4">Live real-time motion capture</h3>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
+            Our real-time motion capture system with a single LiDAR.
+            Our system does not require offline calibration and captures the subject’s motion in real-time, allowing users to check the results immediately. 
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <!-- <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/replay.mp4"
+                    type="video/mp4">
+          </video> -->
+          <video id="live_stream" autoplay controls muted loop playsinline width="85%">
+            <source src="static/videos/live_stream.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <!--/ Live-stream. -->
+
+        <!-- comparison. -->
+        <!-- <br/>
+        <h3 class="title is-4">Comparison with SOTA methods</h3>
+        <div class="content has-text-justified">
+          <p>
+            To validate the effectiveness of our method, we compare our results with the state-of-the-art methods, 
+            VIBE and MotionBERT, which are vision-based methods.
           </p>
         </div>
         <div class="content has-text-centered">
@@ -341,22 +383,95 @@
             <source src="./static/videos/replay.mp4"
                     type="video/mp4">
           </video>
+          <video id="live_stream" autoplay controls muted loop playsinline width="85%">
+            <source src="static/videos/live_stream.mp4"
+                    type="video/mp4">
+          </video>
         </div> -->
-        <!--/ Re-rendering. -->
+        <!--/ comparison. -->
 
       </div>
     </div>
     <!--/ Animation. -->
 
+    <!-- Concurrent Work. -->
+    <br/>
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-4">Comparison with SOTA methods</h2>
+        <div class="content has-text-justified">
+          <p>
+            To validate the effectiveness of our method, we compare our results with the state-of-the-art methods, 
+            VIBE and MotionBERT, which are vision-based methods. <b>All results were not post-processed to ensure a fair comparison.</b>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+
+    <div class="columns is-centered">
+      
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <p>
+            <b>* Subject 1: 170cm</b>
+            </br>
+            Locomotion
+          </p>
+          <video id="comparison1_1" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/comparison1_1.mp4"
+                    type="video/mp4">
+          </video>
+          <p>
+            Static
+          </p>
+          <video id="comparison1" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/comparison1_2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column">
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              <b>* Subject 2: 162cm</b>
+              </br>
+              Locomotion
+            </p>
+            <video id="comparison2_1" autoplay controls muted loop playsinline height="100%">
+              <source src="static/videos/comparison2_1.mp4"
+                      type="video/mp4">
+            </video>
+            <p>
+              Static
+            </p>
+            <video id="comparison2)2" autoplay controls muted loop playsinline height="100%">
+              <source src="static/videos/comparison2_2.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+      <!--/ Matting. -->
+    </div>
+
 
     <!-- Concurrent Work. -->
+    <br/>
+    <br/>
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Related Links</h2>
 
         <div class="content has-text-justified">
           <p>
-            If you are interested in AI powered markerless LiDAR based motion capture, check out our website, <a href="https://www.movin3d.com">MOVIN Inc.</a>
+            If you are interested in AI-powered markerless LiDAR based motion capture, check out our website, <a href="https://www.movin3d.com">MOVIN, Inc.</a>
           </p>
         </div>
       </div>
@@ -370,13 +485,20 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code></code></pre>
     <!-- <pre><code>@article{park2021nerfies,
   author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
   title     = {Nerfies: Deformable Neural Radiance Fields},
   journal   = {ICCV},
   year      = {2021},
 }</code></pre> -->
+    <pre><code>@misc{jang2023movin,
+      title={MOVIN: Real-time Motion Capture using a Single LiDAR}, 
+      author={Deok-Kyeong Jang and Dongseok Yang and Deok-Yun Jang and Byeoli Choi and Taeil Jin and Sung-Hee Lee},
+      year={2023},
+      eprint={2309.09314},
+      archivePrefix={arXiv},
+      primaryClass={cs.GR}
+}</code></pre>
   </div>
 </section>
 
