@@ -110,7 +110,7 @@
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code & Data</span>
+                  <span>Code & Data (Coming soon)</span>
                   </a>
               </span>
               <!-- Dataset Link. -->
@@ -263,45 +263,45 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <!-- <div class="columns is-centered"> -->
-
-      <!-- Visual Effects. -->
-      <!-- <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
+    <!-- Concurrent Work. -->
+    <br/>
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Equipment setup</h2>
+        <div class="content has-text-justified">
           <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+            Equipment setup for LiDAR based markerless real-time motion capture using our solution.
+            We only need one laptop to process the incoming LiDAR signal and generate output motion aligned with the 3D point cloud data.
           </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <img src="./static/images/setup.JPG"/>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
           <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
+            <source src="./static/videos/setup.MOV"
                     type="video/mp4">
           </video>
-        </div>
-      </div> -->
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <!-- <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
+          <div class="content has-text-justified">
             <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
+              Users simply mount a single LiDAR sensor in front of themselves and can perform any action they desire.
             </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
           </div>
         </div>
-      </div> -->
-      <!--/ Matting. -->
-    
-    <!-- </div> -->
+      </div>
+    </div>
 
     <!-- Animation. -->
+    <br/>
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Results</h2>
@@ -357,7 +357,7 @@
             <source src="./static/videos/replay.mp4"
                     type="video/mp4">
           </video> -->
-          <video id="live_stream" autoplay controls muted loop playsinline width="85%">
+          <video id="live_stream" autoplay controls muted loop playsinline height="100%">
             <source src="static/videos/live_stream.mp4"
                     type="video/mp4">
           </video>
@@ -417,20 +417,25 @@
         <div class="content">
           <p>
             <b>* Subject 1: 170cm</b>
-            </br>
-            Locomotion
           </p>
           <video id="comparison1_1" autoplay controls muted loop playsinline height="100%">
             <source src="static/videos/comparison1_1.mp4"
                     type="video/mp4">
           </video>
-          <p>
-            Static
-          </p>
+          <div class="content has-text-centered">
+            <p>
+              Locomotion.
+            </p>
+          </div>
           <video id="comparison1" autoplay controls muted loop playsinline height="100%">
             <source src="static/videos/comparison1_2.mp4"
                     type="video/mp4">
           </video>
+          <div class="content has-text-centered">
+            <p>
+              Static.
+            </p>
+          </div>
         </div>
       </div>
       <!--/ Visual Effects. -->
@@ -441,20 +446,25 @@
           <div class="column content">
             <p>
               <b>* Subject 2: 162cm</b>
-              </br>
-              Locomotion
             </p>
             <video id="comparison2_1" autoplay controls muted loop playsinline height="100%">
               <source src="static/videos/comparison2_1.mp4"
                       type="video/mp4">
             </video>
-            <p>
-              Static
-            </p>
+            <div class="content has-text-centered">
+              <p>
+                Locomotion.
+              </p>
+            </div>
             <video id="comparison2)2" autoplay controls muted loop playsinline height="100%">
               <source src="static/videos/comparison2_2.mp4"
                       type="video/mp4">
             </video>
+            <div class="content has-text-centered">
+              <p>
+                Static.
+              </p>
+            </div>
           </div>
         </div>
       </div>
