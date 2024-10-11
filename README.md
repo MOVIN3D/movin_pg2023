@@ -2,7 +2,7 @@
 
 This is the repository that contains source code for the [MOVIN website](https://movin3d.github.io/movin_pg2023/).
 
-If you find Nerfies useful for your work please cite:
+If you find MOVIN paper useful for your work please cite:
 ```
 @misc{jang2023movin,
       title={MOVIN: Real-time Motion Capture using a Single LiDAR}, 
